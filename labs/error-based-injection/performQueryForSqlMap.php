@@ -17,8 +17,8 @@
 
 
         //Displaying full query and url parameter
-        echo "Injected String" . "<div class='id'>".$id."</div><br>";
-        echo "Full query executed". "<div class='query'>". $query ."</div><br>";
+        //echo "Injected String" . "<div class='id'>".$id."</div><br>";
+        //echo "Full query executed". "<div class='query'>". $query ."</div><br>";
 
 
         //Check if any rows were returned
@@ -28,7 +28,7 @@
         //If no rows are returned then print the error (if any to print)
         else {
             $error = print_r(mysqli_error($con1), true);
-            echo "SQL Error" . "<div class='error'>" . $error . "</div>";
+            echo "" . "<div class='error'>" . $error . "</div>";
         }
     }
 ?>
