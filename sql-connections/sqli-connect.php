@@ -1,0 +1,16 @@
+<?php
+    //Include database connection parameters
+    include("../../sql-connections/db-creds.inc");
+    error_reporting(0);
+
+    //Mysql connection
+    $con1 = mysqli_connect($host,$dbuser,$dbpass);
+
+    //Test connection
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+    else {
+        @mysqli_select_db($con1, $dbname) or die ( "Unable to connect to the database: $dbname");
+    }
+?>
